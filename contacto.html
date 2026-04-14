@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto - WTJ | Web Turismo Jujuy</title>
-    <link rel="stylesheet" href="css/style-new.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -146,54 +146,6 @@
             <p>&copy; 2026 WTJ | Web Turismo Jujuy. Todos los derechos reservados.</p>
         </div>
     </footer>
-    <script>
-document.addEventListener('DOMContentLoaded', function() {
-    const form = document.getElementById('contact-form');
-    const spinner = document.getElementById('form-spinner');
-    const modal = document.getElementById('modal-confirm');
-    const closeModal = document.getElementById('close-modal');
-
-    // Validar y enviar formulario
-    form.addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        // Validación básica
-        const name = document.getElementById('name').value.trim();
-        const email = document.getElementById('email').value.trim();
-        const message = document.getElementById('message').value.trim();
-        
-        if (!name || !email || !message) {
-            alert('Por favor completa todos los campos');
-            return;
-        }
-        
-        // Mostrar spinner
-        spinner.style.display = 'flex';
-        form.querySelector('button[type="submit"]').disabled = true;
-        
-        // Simular envío (1.8 segundos)
-        setTimeout(() => {
-            spinner.style.display = 'none';
-            modal.style.display = 'flex';
-            form.reset();
-            form.querySelector('button[type="submit"]').disabled = false;
-        }, 1800);
-    });
-    
-    // Cerrar modal
-    if (closeModal) {
-        closeModal.addEventListener('click', function() {
-            modal.style.display = 'none';
-        });
-    }
-    
-    // Cerrar modal al hacer clic fuera
-    modal.addEventListener('click', function(e) {
-        if (e.target === modal) {
-            modal.style.display = 'none';
-        }
-    });
-});
-</script>
+    <script src="js/main.js"></script>
 </body>
 </html>

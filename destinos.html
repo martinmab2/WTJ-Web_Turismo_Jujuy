@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style-new.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Destinos turisticos</title>
 </head>
 <body>
@@ -229,32 +229,7 @@
         </div>
     </footer>
     
-    <script>
-        // Script para navegar a un destino específico desde el menú
-        document.addEventListener('DOMContentLoaded', function() {
-            // Obtener el parámetro 'destino' de la URL
-            const urlParams = new URLSearchParams(window.location.search);
-            const destino = urlParams.get('destino');
-            
-            if (destino) {
-                // Buscar el elemento con el ID correspondiente
-                const elemento = document.getElementById('destino-' + destino);
-                
-                if (elemento) {
-                    // Esperar un poco para que la página se cargue completamente
-                    setTimeout(function() {
-                        elemento.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                        // Añadir efecto visual de destaque
-                        elemento.style.transform = 'scale(1.05)';
-                        elemento.style.transition = 'transform 0.3s ease';
-                        setTimeout(function() {
-                            elemento.style.transform = 'scale(1)';
-                        }, 300);
-                    }, 100);
-                }
-            }
-        });
-    </script>
+    <script src="js/main.js"></script>
     
 </body>
 </html>

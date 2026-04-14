@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agencias de Turismo - WTJ</title>
-    <link rel="stylesheet" href="css/style-new.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <!-- Header con Mega-Menú -->
@@ -386,23 +386,6 @@
         </div>
     </footer>
 
-    <script>
-        // Inicializar ratings con valores predeterminados
-        document.addEventListener('DOMContentLoaded', function() {
-            const ratings = document.querySelectorAll('.rating');
-
-            ratings.forEach(function(rating, index) {
-                // Valores iniciales para cada agencia (1-5 estrellas)
-                const initialRatings = [5, 4, 5, 4, 5, 4];
-                const initialRating = initialRatings[index] || 4;
-
-                // Marcar la estrella correspondiente
-                const inputs = rating.querySelectorAll('input');
-                if (inputs[5 - initialRating]) {
-                    inputs[5 - initialRating].checked = true;
-                }
-            });
-        });
-    </script>
+    <script src="js/main.js"></script>
 </body>
 </html>
