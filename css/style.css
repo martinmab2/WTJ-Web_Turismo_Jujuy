@@ -705,3 +705,187 @@ body {
         font-size: 1rem;
     }
 }
+
+/* ============================================
+   AGENCIAS SECTION
+   ============================================ */
+
+.agencias-section {
+    padding: 5rem 0;
+    background: #f8f9fa;
+}
+
+.agencias-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: var(--primary-color);
+}
+
+.agencias-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+/* Flip Card Styles */
+.agencia-card {
+    background-color: transparent;
+    perspective: 1000px;
+    height: 400px;
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.agencia-card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.card-front {
+    background-color: white;
+}
+
+.card-back {
+    background-color: var(--primary-color);
+    color: white;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.agencia-image {
+    height: 200px;
+    overflow: hidden;
+}
+
+.agencia-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.agencia-card:hover .agencia-image img {
+    transform: scale(1.1);
+}
+
+.agencia-info {
+    padding: 1.5rem;
+}
+
+.agencia-info h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+}
+
+.agencia-info p {
+    color: #666;
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+}
+
+/* Star Rating System */
+.rating {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.rating input {
+    display: none;
+}
+
+.rating label {
+    font-size: 2rem;
+    color: #ddd;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    margin: 0 2px;
+}
+
+/* Star hover and checked effects */
+.rating input:checked ~ label,
+.rating label:hover,
+.rating label:hover ~ label {
+    color: #ffc107;
+    animation: starPulse 0.3s ease-in-out;
+}
+
+/* Pulse animation for stars */
+@keyframes starPulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+.card-back h3 {
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+}
+
+.card-back p {
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+.agencia-details {
+    margin-bottom: 2rem;
+}
+
+.agencia-details p {
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.agencia-details strong {
+    color: var(--accent-color);
+}
+
+.contact-btn {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: var(--secondary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    align-self: flex-start;
+}
+
+.contact-btn:hover {
+    background-color: #c0392b;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(231, 76, 60, 0.3);
+}
+
+/* Responsive para agencias */
+@media (max-width: 768px) {
+    .agencias-grid {
+        grid-template-columns: 1fr;
+    }
+}
