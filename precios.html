@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Precios - WTJ | Web Turismo Jujuy</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">WTJ</div>
+                <nav class="nav-menu">
+                    <ul class="menu-items">
+                        <li class="menu-item"><a href="index.html" class="menu-link">Inicio</a></li>
+                        <li class="menu-item">
+                            <a href="destinos.html" class="menu-link">Destinos</a>
+                            <div class="mega-menu">
+                                <div class="mega-menu-content">
+                                    <div class="mega-column">
+                                        <h4>Destinos Populares</h4>
+                                        <ul>
+                                            <li><a href="destinos.html?destino=hornocal">Serranías del Hornocal</a></li>
+                                            <li><a href="destinos.html?destino=pozos">Laguna de los Pozos</a></li>
+                                            <li><a href="destinos.html?destino=purmamarca">Purmamarca</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="mega-column">
+                                        <h4>Naturaleza</h4>
+                                        <ul>
+                                            <li><a href="destinos.html?destino=sierras">Sierras</a></li>
+                                            <li><a href="destinos.html?destino=salinas">Salinas</a></li>
+                                            <li><a href="destinos.html?destino=bosques">Bosques</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="mega-column">
+                                        <h4>Cultura</h4>
+                                        <ul>
+                                            <li><a href="#">Pueblos Originarios</a></li>
+                                            <li><a href="#">Artesanías</a></li>
+                                            <li><a href="#">Patrimonio</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="menu-item">
+                            <a href="PerfilAgencia.html" class="menu-link">Agencias</a>
+                            <div class="mega-menu">
+                                <div class="mega-menu-content">
+                                    <div class="mega-column">
+                                        <h4>Agencias Recomendadas</h4>
+                                        <ul>
+                                            <li><a href="#">Aventura Tours</a></li>
+                                            <li><a href="#">Jujuy Travel</a></li>
+                                            <li><a href="#">Turismo Local</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="menu-item"><a href="precios.html" class="menu-link">Precios</a></li>
+                        <li class="menu-item"><a href="contacto.html" class="menu-link">Contacto</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <video autoplay muted loop class="hero-video">
+            <source src="https://videos.pexels.com/video-files/2795658/2795658-sd_640_360_30fps.mp4" type="video/mp4">
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title animate-title">Nuestros Precios 2026</h1>
+            <p class="hero-subtitle animate-subtitle">Comparador de destinos y paquetes turísticos</p>
+        </div>
+    </section>
+
+    <main class="page-section">
+        <div class="container">
+            <h2>Tabla de Precios por Destino</h2>
+            <p style="text-align: center; color: #666; margin-bottom: 2rem;">Pasa el cursor sobre los precios para ver detalles de lo que incluye cada paquete</p>
+            
+            <div class="table-container">
+                <table class="prices-table">
+                    <thead>
+                        <tr>
+                            <th>Destino</th>
+                            <th>Categoría</th>
+                            <th>Duración</th>
+                            <th>Precio (ARS)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Serranías del Hornocal -->
+                        <tr class="price-row">
+                            <td class="destination-name">
+                                <strong>Serranías del Hornocal</strong>
+                                <p style="font-size: 0.85rem; color: #999; margin-top: 0.3rem;">Montaña de los 14 colores</p>
+                            </td>
+                            <td><span class="category-badge popular">Popular</span></td>
+                            <td>Full Day</td>
+                            <td>
+                                <span class="price-value" data-tooltip="Incluye: Transporte 4x4, guía experto, almuerzo típico, fotos profesionales, seguro turístico">
+                                    $45,000
+                                </span>
+                            </td>
+                        </tr>
+
+                        <!-- Laguna de los Pozos -->
+                        <tr class="price-row">
+                            <td class="destination-name">
+                                <strong>Laguna de los Pozos</strong>
+                                <p style="font-size: 0.85rem; color: #999; margin-top: 0.3rem;">Espejo de agua cristalina</p>
+                            </td>
+                            <td><span class="category-badge naturaleza">Naturaleza</span></td>
+                            <td>5 Días</td>
+                            <td>
+                                <span class="price-value" data-tooltip="Incluye: Alojamiento 4 noches, todas las comidas, actividades acuáticas, equipo de buceo, excursiones guiadas">
+                                    $32,000
+                                </span>
+                            </td>
+                        </tr>
+
+                        <!-- Purmamarca -->
+                        <tr class="price-row">
+                            <td class="destination-name">
+                                <strong>Purmamarca</strong>
+                                <p style="font-size: 0.85rem; color: #999; margin-top: 0.3rem;">Cerro de los Siete Colores</p>
+                            </td>
+                            <td><span class="category-badge cultural">Cultural</span></td>
+                            <td>10 Días</td>
+                            <td>
+                                <span class="price-value" data-tooltip="Incluye: Hospedaje, comidas gourmet, tours culturales, museos, artesanías, acceso a iglesia histórica, transporte">
+                                    $52,000
+                                </span>
+                            </td>
+                        </tr>
+
+                        <!-- Sierras -->
+                        <tr class="price-row">
+                            <td class="destination-name">
+                                <strong>Sierras de Jujuy</strong>
+                                <p style="font-size: 0.85rem; color: #999; margin-top: 0.3rem;">Montañas vírgenes</p>
+                            </td>
+                            <td><span class="category-badge naturaleza">Naturaleza</span></td>
+                            <td>8 Horas</td>
+                            <td>
+                                <span class="price-value" data-tooltip="Incluye: Transporte, guía naturalista, equipo de trekking, refrigerios, fotografía profesional">
+                                    $38,000
+                                </span>
+                            </td>
+                        </tr>
+
+                        <!-- Salinas Grandes -->
+                        <tr class="price-row">
+                            <td class="destination-name">
+                                <strong>Salinas Grandes</strong>
+                                <p style="font-size: 0.85rem; color: #999; margin-top: 0.3rem;">El cielo reflejado en la tierra</p>
+                            </td>
+                            <td><span class="category-badge naturaleza">Naturaleza</span></td>
+                            <td>5 Horas</td>
+                            <td>
+                                <span class="price-value" data-tooltip="Incluye: Visita a minas de sal, guía bilingüe, refrigerios, fotos de atardecer, wifi durante el tour">
+                                    $25,000
+                                </span>
+                            </td>
+                        </tr>
+
+                        <!-- Bosques -->
+                        <tr class="price-row">
+                            <td class="destination-name">
+                                <strong>Bosques de Yunga</strong>
+                                <p style="font-size: 0.85rem; color: #999; margin-top: 0.3rem;">Biodiversidad única</p>
+                            </td>
+                            <td><span class="category-badge naturaleza">Naturaleza</span></td>
+                            <td>4 Horas</td>
+                            <td>
+                                <span class="price-value" data-tooltip="Incluye: Caminata interpretativa, binoculares para avistamiento, guía ornitólogo, bebidas, snacks">
+                                    $35,000
+                                </span>
+                            </td>
+                        </tr>
+
+                        <!-- Paleta del Pintor -->
+                        <tr class="price-row">
+                            <td class="destination-name">
+                                <strong>Paleta del Pintor</strong>
+                                <p style="font-size: 0.85rem; color: #999; margin-top: 0.3rem;">Formaciones geológicas únicas</p>
+                            </td>
+                            <td><span class="category-badge popular">Popular</span></td>
+                            <td>6 Horas</td>
+                            <td>
+                                <span class="price-value" data-tooltip="Incluye: Transporte 4x4, almuerzo con vista panorámica, kit fotográfico, acceso a miradores exclusivos">
+                                    $42,000
+                                </span>
+                            </td>
+                        </tr>
+
+                        <!-- Parque Nacional Calilegua -->
+                        <tr class="price-row">
+                            <td class="destination-name">
+                                <strong>Parque Nacional Calilegua</strong>
+                                <p style="font-size: 0.85rem; color: #999; margin-top: 0.3rem;">Selva subtropical protegida</p>
+                            </td>
+                            <td><span class="category-badge naturaleza">Naturaleza</span></td>
+                            <td>3 Días</td>
+                            <td>
+                                <span class="price-value" data-tooltip="Incluye: 2 noches alojamiento, comidas, guía de parque, trekking, avistamiento de fauna, entrada al parque">
+                                    $28,000
+                                </span>
+                            </td>
+                        </tr>
+
+                        <!-- Combo Premium -->
+                        <tr class="price-row premium">
+                            <td class="destination-name">
+                                <strong>⭐ Pack Premium Jujuy</strong>
+                                <p style="font-size: 0.85rem; color: #666; margin-top: 0.3rem;">Todos los destinos principales</p>
+                            </td>
+                            <td><span class="category-badge premium">Exclusivo</span></td>
+                            <td>15 Días</td>
+                            <td>
+                                <span class="price-value featured" data-tooltip="Incluye: Vuelos domésticos, 5 estrellas, todas las comidas gourmet, tours privados, asistencia 24/7, seguros completos">
+                                    $185,000
+                                </span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Sección de información adicional -->
+            <div style="margin-top: 4rem; padding: 2rem; background: #f8f9fa; border-radius: 15px;">
+                <h3 style="margin-bottom: 1.5rem;">❓ Preguntas Frecuentes sobre Precios</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
+                    <div class="info-card">
+                        <h4 style="color: var(--secondary-color); margin-bottom: 0.5rem;">¿Incluyen impuestos?</h4>
+                        <p>Sí, todos nuestros precios incluyen IVA y tasas de servicio. No hay sorpresas ocultas.</p>
+                    </div>
+                    <div class="info-card">
+                        <h4 style="color: var(--secondary-color); margin-bottom: 0.5rem;">¿Hay descuentos por grupo?</h4>
+                        <p>Sí. Grupos de 10+ personas reciben 15% de descuento. Contáctanos para cotizar.</p>
+                    </div>
+                    <div class="info-card">
+                        <h4 style="color: var(--secondary-color); margin-bottom: 0.5rem;">¿Puedo cancelar?</h4>
+                        <p>Cancelaciones hasta 72 horas antes: reembolso del 100%. Después: retención del 30%.</p>
+                    </div>
+                    <div class="info-card">
+                        <h4 style="color: var(--secondary-color); margin-bottom: 0.5rem;">¿Se pueden combinar paquetes?</h4>
+                        <p>Absolutamente. Diseñamos itinerarios personalizados según tus preferencias.</p>
+                    </div>
+                    <div class="info-card">
+                        <h4 style="color: var(--secondary-color); margin-bottom: 0.5rem;">¿Hay temporada baja?</h4>
+                        <p>Sí. Mayo-Junio y Septiembre-Octubre tienen precios 20% reducidos.</p>
+                    </div>
+                    <div class="info-card">
+                        <h4 style="color: var(--secondary-color); margin-bottom: 0.5rem;">Transporte incluido?</h4>
+                        <p>Sí en full days. Paquetes más largos ofrecen opciones con/sin transporte.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-section newsletter-section">
+                <h4>Newsletter</h4>
+                <p>Recibe novedades y ofertas exclusivas de Jujuy.</p>
+                <form action="#" class="footer-form">
+                    <input type="email" placeholder="Tu email" required>
+                    <button type="submit">Suscribirse</button>
+                </form>
+            </div>
+            <div class="footer-section social-section">
+                <h4>Síguenos</h4>
+                <div class="social-links">
+                    <a href="#">Facebook</a>
+                    <a href="#">Instagram</a>
+                    <a href="#">Twitter</a>
+                </div>
+            </div>
+            <div class="footer-section map-section">
+                <h4>Encuéntranos</h4>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.5!2d-65.3!3d-24.2!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjTCsDEyJzAwLjAiUyA2NcKwMTgnMDAuMCJX!5e0!3m2!1ses!2sar!4v1234567890123!5m2!1ses!2sar" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; 2026 Web Turismo Jujuy. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
