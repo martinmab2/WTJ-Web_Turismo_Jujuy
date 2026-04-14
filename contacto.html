@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - WTJ | Web Turismo Jujuy</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">WTJ</div>
+                <nav class="nav-menu">
+                    <ul class="menu-items">
+                        <li class="menu-item">
+                            <a href="index.html" class="menu-link">Inicio</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="destinos.html" class="menu-link">Destinos</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="agencias.html" class="menu-link">Agencias</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="precios.html" class="menu-link">Precios</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#contacto" class="menu-link">Contacto</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="contacto">
+            <div class="container">
+                <h2 class="titulo">Formulario de Contacto</h2>
+               <form action="#" method="POST" class="contact-form" id="contact-form">
+                    <div class="form-group">
+                        <label for="name">Nombre:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mensaje:</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <div class="form-spinner" id="form-spinner" style="display:none;">
+                        <div class="spinner"></div>
+                    </div>
+                    <button type="submit" class="cta-button">Enviar</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <div class="modal-confirm" id="modal-confirm">
+        <div class="modal-content">
+            <h3>¡Mensaje enviado!</h3>
+            <p>Gracias por contactarnos. Te responderemos pronto.</p>
+            <button class="cta-button" id="close-modal">Cerrar</button>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 WTJ | Web Turismo Jujuy. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    <script>
+const form = document.getElementById('contact-form');
+const spinner = document.getElementById('form-spinner');
+const modal = document.getElementById('modal-confirm');
+const closeModal = document.getElementById('close-modal');
+
+form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    spinner.style.display = 'flex';
+    form.querySelector('button[type="submit"]').disabled = true;
+    setTimeout(() => {
+        spinner.style.display = 'none';
+        modal.style.display = 'flex';
+        form.reset();
+        form.querySelector('button[type="submit"]').disabled = false;
+    }, 1800);
+});
+closeModal.addEventListener('click', function() {
+    modal.style.display = 'none';
+});
+</script>
+</body>
+</html>

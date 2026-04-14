@@ -705,3 +705,77 @@ body {
         font-size: 1rem;
     }
 }
+/* ============================================
+   FORMULARIO DE CONTACTO AVANZADO
+   ============================================ */
+.contact-form input:valid, .contact-form textarea:valid {
+    border: 2px solid #43cea2;
+    background: #f6fff8;
+}
+.contact-form input:invalid:focus, .contact-form textarea:invalid:focus {
+    border: 2px solid #e74c3c;
+    background: #fff6f6;
+}
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+}
+.contact-form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: grid;
+    gap: 1.5rem;
+    background: #fff;
+    padding: 2rem 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(44,62,80,0.08);
+}
+.form-spinner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+.spinner {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    animation: spin 1s linear infinite;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg);}
+    100% { transform: rotate(360deg);}
+}
+.modal-confirm {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(44,62,80,0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+.modal-content {
+    background: #fff;
+    padding: 2.5rem 2rem;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 8px 32px rgba(44,62,80,0.15);
+}
+@media (max-width: 600px) {
+    .contact-form {
+        padding: 1rem;
+    }
+    .modal-content {
+        padding: 1.5rem 0.5rem;
+    }
+}
+.titulo {
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 2rem;
+    color: var(--primary-color);
+}
