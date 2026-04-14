@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - WTJ | Web Turismo Jujuy</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">WTJ</div>
+                <nav class="nav-menu">
+                    <ul class="menu-items">
+                        <li class="menu-item"><a href="index.html" class="menu-link">Inicio</a></li>
+                        <li class="menu-item">
+                            <a href="destinos.html" class="menu-link">Destinos</a>
+                            <div class="mega-menu">
+                                <div class="mega-menu-content">
+                                    <div class="mega-column">
+                                        <h4>Destinos Populares</h4>
+                                        <ul>
+                                            <li><a href="destinos.html?destino=hornocal">Serranías del Hornocal</a></li>
+                                            <li><a href="destinos.html?destino=pozos">Laguna de los Pozos</a></li>
+                                            <li><a href="destinos.html?destino=purmamarca">Purmamarca</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="mega-column">
+                                        <h4>Naturaleza</h4>
+                                        <ul>
+                                            <li><a href="destinos.html?destino=sierras">Sierras</a></li>
+                                            <li><a href="destinos.html?destino=salinas">Salinas</a></li>
+                                            <li><a href="destinos.html?destino=bosques">Bosques</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="mega-column">
+                                        <h4>Cultura</h4>
+                                        <ul>
+                                            <li><a href="#">Pueblos Originarios</a></li>
+                                            <li><a href="#">Artesanías</a></li>
+                                            <li><a href="#">Patrimonio</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="menu-item">
+                            <a href="PerfilAgencia.html" class="menu-link">Agencias</a>
+                            <div class="mega-menu">
+                                <div class="mega-menu-content">
+                                    <div class="mega-column">
+                                        <h4>Agencias Recomendadas</h4>
+                                        <ul>
+                                            <li><a href="#">Aventura Tours</a></li>
+                                            <li><a href="#">Jujuy Travel</a></li>
+                                            <li><a href="#">Turismo Local</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="menu-item"><a href="precios.html" class="menu-link">Precios</a></li>
+                        <li class="menu-item"><a href="blog.html" class="menu-link">Blog</a></li>
+                        <li class="menu-item"><a href="contacto.html" class="menu-link">Contacto</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <video autoplay muted loop class="hero-video">
+            <source src="https://videos.pexels.com/video-files/2795658/2795658-sd_640_360_30fps.mp4" type="video/mp4">
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title animate-title">Blog de Destinos</h1>
+            <p class="hero-subtitle animate-subtitle">Historias, tips y experiencias de Jujuy</p>
+        </div>
+    </section>
+
+    <main class="page-section blog-section">
+        <div class="container">
+            <h2>Revista de Turismo Jujuy</h2>
+            
+            <!-- Sistema de filtrado -->
+            <div class="blog-filters">
+                <input type="radio" name="category" id="all-cat" checked>
+                <input type="radio" name="category" id="cat-naturaleza">
+                <input type="radio" name="category" id="cat-cultura">
+                <input type="radio" name="category" id="cat-gastronomia">
+                <input type="radio" name="category" id="cat-aventura">
+
+                <div class="filter-buttons">
+                    <label for="all-cat" class="filter-btn active">📰 Todos</label>
+                    <label for="cat-naturaleza" class="filter-btn">🏔️ Naturaleza</label>
+                    <label for="cat-cultura" class="filter-btn">🎭 Cultura</label>
+                    <label for="cat-gastronomia" class="filter-btn">🍽️ Gastronomía</label>
+                    <label for="cat-aventura" class="filter-btn">🧗 Aventura</label>
+                </div>
+            </div>
+
+            <!-- Grid de artículos tipo newspaper -->
+            <div class="blog-grid">
+                
+                <!-- ARTÍCULO 1 - PRINCIPAL -->
+                <article class="blog-article main-article cat-naturaleza" data-category="naturaleza">
+                    <div class="article-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                        <img src="https://proyungas.org.ar/wp-content/uploads/2018/05/1526308028367.jpg" alt="Serranías del Hornocal">
+                    </div>
+                    <div class="article-content">
+                        <div class="article-meta">
+                            <span class="article-date">14 Abril, 2026</span>
+                            <span class="article-author">Por Juan Pérez</span>
+                        </div>
+                        <h3>Serranías del Hornocal: La Montaña de los 14 Colores</h3>
+                        <p>Descubre el espectáculo geológico más impresionante del norte argentino. Nuestro guía completo sobre cómo llegar, cuándo visitarla y dónde hospedarse.</p>
+                        <div class="article-tags">
+                            <span class="tag tag-naturaleza">Naturaleza</span>
+                            <span class="tag tag-paisaje">Paisaje</span>
+                            <span class="tag tag-fotografia">Fotografía</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- ARTÍCULO 2 -->
+                <article class="blog-article cat-cultura" data-category="cultura">
+                    <div class="article-image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                        <img src="https://www.clarin.com/2017/06/11/B1vycyjMb_1200x0.jpg" alt="Purmamarca">
+                    </div>
+                    <div class="article-content">
+                        <div class="article-meta">
+                            <span class="article-date">10 Abril, 2026</span>
+                            <span class="article-author">Por María García</span>
+                        </div>
+                        <h3>Purmamarca: Cultura y Tradición Colonial</h3>
+                        <p>Recorre las calles de este pueblo mágico, visita la iglesia de Santa Rosa de Lima y descubre los mejores locales de artesanías.</p>
+                        <div class="article-tags">
+                            <span class="tag tag-cultura">Cultura</span>
+                            <span class="tag tag-historia">Historia</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- ARTÍCULO 3 -->
+                <article class="blog-article cat-gastronomia" data-category="gastronomia">
+                    <div class="article-image" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">
+                        <img src="https://media.prensa.jujuy.gob.ar/p/7c587e403ff09ed704245554902158ef/adjuntos/301/imagenes/000/331/0000331451/1200x675/smart/img_5547jpg.jpg" alt="Cocina Jujeña">
+                    </div>
+                    <div class="article-content">
+                        <div class="article-meta">
+                            <span class="article-date">8 Abril, 2026</span>
+                            <span class="article-author">Por Chef Roberto</span>
+                        </div>
+                        <h3>Sabores de Jujuy: Gastronomía Tradicional</h3>
+                        <p>La cocina norteña cuenta historias ancestrales. Aprende a preparar empanadas jujeñas, locro y destacados platos autóctonos.</p>
+                        <div class="article-tags">
+                            <span class="tag tag-gastronomia">Gastronomía</span>
+                            <span class="tag tag-recetas">Recetas</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- ARTÍCULO 4 -->
+                <article class="blog-article cat-aventura" data-category="aventura">
+                    <div class="article-image" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <img src="https://comarcaturistica.com.ar/wp-content/uploads/2024/09/sierrasgrandes9.jpg" alt="Trekking">
+                    </div>
+                    <div class="article-content">
+                        <div class="article-meta">
+                            <span class="article-date">5 Abril, 2026</span>
+                            <span class="article-author">Por Carlos López</span>
+                        </div>
+                        <h3>Trekking en las Sierras: Aventura de Altura</h3>
+                        <p>Rutas de senderismo para todos los niveles. Desde caminatas cortas hasta expediciones de varios días en las montañas de Jujuy.</p>
+                        <div class="article-tags">
+                            <span class="tag tag-aventura">Aventura</span>
+                            <span class="tag tag-rutas">Rutas</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- ARTÍCULO 5 -->
+                <article class="blog-article cat-naturaleza" data-category="naturaleza">
+                    <div class="article-image" style="background: linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%);">
+                        <img src="https://adntravel.com.ar/wp-content/uploads/2026/03/flamencos-laguna-pozuelo-jujuy.webp" alt="Laguna">
+                    </div>
+                    <div class="article-content">
+                        <div class="article-meta">
+                            <span class="article-date">2 Abril, 2026</span>
+                            <span class="article-author">Por Lucía Fernández</span>
+                        </div>
+                        <h3>Lagunas de Altura: Espejos del Cielo</h3>
+                        <p>Explora las lagunas más hermosas de Jujuy. Fauna endémica, flamencos rosados y vistas que quitan el aliento.</p>
+                        <div class="article-tags">
+                            <span class="tag tag-naturaleza">Naturaleza</span>
+                            <span class="tag tag-fauna">Fauna</span>
+                            <span class="tag tag-fotografia">Fotografía</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- ARTÍCULO 6 -->
+                <article class="blog-article cat-cultura" data-category="cultura">
+                    <div class="article-image" style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);">
+                        <img src="https://media.prensa.jujuy.gob.ar/p/7c587e403ff09ed704245554902158ef/adjuntos/301/imagenes/000/331/0000331451/1200x675/smart/img_5547jpg.jpg" alt="Pueblos Originarios">
+                    </div>
+                    <div class="article-content">
+                        <div class="article-meta">
+                            <span class="article-date">30 Marzo, 2026</span>
+                            <span class="article-author">Por Dr. Antropólogo</span>
+                        </div>
+                        <h3>Pueblos Originarios: Raíces de Jujuy</h3>
+                        <p>Conoce la historia ancestral de los pueblos quechua, aymara y guaraní que habitan estas tierras desde hace milenios.</p>
+                        <div class="article-tags">
+                            <span class="tag tag-cultura">Cultura</span>
+                            <span class="tag tag-historia">Historia</span>
+                            <span class="tag tag-tradicion">Tradición</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- ARTÍCULO 7 -->
+                <article class="blog-article cat-aventura" data-category="aventura">
+                    <div class="article-image" style="background: linear-gradient(135deg, #ff9a56 0%, #ff6a88 100%);">
+                        <img src="https://comarcaturistica.com.ar/wp-content/uploads/2024/09/sierrasgrandes9.jpg" alt="Escalada">
+                    </div>
+                    <div class="article-content">
+                        <div class="article-meta">
+                            <span class="article-date">28 Marzo, 2026</span>
+                            <span class="article-author">Por Guía Montaña</span>
+                        </div>
+                        <h3>Escalada en Roca: Desafío Vertical</h3>
+                        <p>Encuentra los mejores spots para escalar en Jujuy. Desde iniciante hasta nivel experto, tenemos las rutas perfectas.</p>
+                        <div class="article-tags">
+                            <span class="tag tag-aventura">Aventura</span>
+                            <span class="tag tag-deportes">Deportes</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- ARTÍCULO 8 -->
+                <article class="blog-article cat-gastronomia" data-category="gastronomia">
+                    <div class="article-image" style="background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);">
+                        <img src="https://proyungas.org.ar/wp-content/uploads/2018/05/1526308028367.jpg" alt="Bebidas tradicionales">
+                    </div>
+                    <div class="article-content">
+                        <div class="article-meta">
+                            <span class="article-date">25 Marzo, 2026</span>
+                            <span class="article-author">Por Sommelierr</span>
+                        </div>
+                        <h3>Bebidas Tradicionales: Más que Refrescos</h3>
+                        <p>Prueba la chicha, los jugos de frutas andinas y otras bebidas que refrescan el alma en el corazón de Jujuy.</p>
+                        <div class="article-tags">
+                            <span class="tag tag-gastronomia">Gastronomía</span>
+                            <span class="tag tag-bebidas">Bebidas</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <!-- SECCIÓN DE COMENTARIOS -->
+    <section class="comments-section page-section">
+        <div class="container">
+            <h2>Comentarios de Lectores</h2>
+            
+            <div class="comments-container">
+                <div class="comment-item">
+                    <div class="comment-avatar avatar-1"></div>
+                    <div class="comment-content">
+                        <div class="comment-author">Sofia Mendez</div>
+                        <div class="comment-date">Hace 2 días</div>
+                        <p>¡Increíble artículo! Seguí todos los consejos y la experiencia fue inolvidable. Las fotos del Hornocal quedan para el recuerdo.</p>
+                        <div class="comment-rating">⭐⭐⭐⭐⭐</div>
+                    </div>
+                </div>
+
+                <div class="comment-item">
+                    <div class="comment-avatar avatar-2"></div>
+                    <div class="comment-content">
+                        <div class="comment-author">Marco Gómez</div>
+                        <div class="comment-date">Hace 5 días</div>
+                        <p>Gracias por la recomendación de restaurantes en Purmamarca. La comida fue exquisita y el ambiente muy acogedor.</p>
+                        <div class="comment-rating">⭐⭐⭐⭐⭐</div>
+                    </div>
+                </div>
+
+                <div class="comment-item">
+                    <div class="comment-avatar avatar-3"></div>
+                    <div class="comment-content">
+                        <div class="comment-author">Elena Rossi</div>
+                        <div class="comment-date">Hace 1 semana</div>
+                        <p>La ruta de trekking fue perfecta para mi nivel. Muy bien explicado. ¿Recomiendan alguna otra para el próximo viaje?</p>
+                        <div class="comment-rating">⭐⭐⭐⭐⭐</div>
+                    </div>
+                </div>
+
+                <div class="comment-item">
+                    <div class="comment-avatar avatar-4"></div>
+                    <div class="comment-content">
+                        <div class="comment-author">Diego Torres</div>
+                        <div class="comment-date">Hace 1 semana</div>
+                        <p>Excelente compilación de información sobre la gastronomía jujeña. Me prepararé el locro en casa usando la receta propuesta.</p>
+                        <div class="comment-rating">⭐⭐⭐⭐</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-section newsletter-section">
+                <h4>Newsletter</h4>
+                <p>Recibe novedades y ofertas exclusivas de Jujuy.</p>
+                <form action="#" class="footer-form">
+                    <input type="email" placeholder="Tu email" required>
+                    <button type="submit">Suscribirse</button>
+                </form>
+            </div>
+            <div class="footer-section social-section">
+                <h4>Síguenos</h4>
+                <div class="social-links">
+                    <a href="#">Facebook</a>
+                    <a href="#">Instagram</a>
+                    <a href="#">Twitter</a>
+                </div>
+            </div>
+            <div class="footer-section map-section">
+                <h4>Encuéntranos</h4>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.5!2d-65.3!3d-24.2!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjTCsDEyJzAwLjAiUyA2NcKwMTgnMDAuMCJX!5e0!3m2!1ses!2sar!4v1234567890123!5m2!1ses!2sar" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; 2026 Web Turismo Jujuy. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

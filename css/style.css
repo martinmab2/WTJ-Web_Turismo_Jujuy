@@ -1462,7 +1462,408 @@ tr:hover {
 }
 
 /* ============================================
-   14. RESPONSIVE - MOBILE (480px)
+   13. BLOG DE DESTINOS - ESTILO NEWSPAPER
+   ============================================ */
+
+.blog-section {
+    background: #f8f9fa;
+    padding: 4rem 0;
+}
+
+/* Filtros con Radio buttons (CSS-only filtering) */
+.blog-filters {
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.blog-filters input[type="radio"] {
+    display: none;
+}
+
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+}
+
+.filter-btn {
+    padding: 0.7rem 1.5rem;
+    background: white;
+    border: 2px solid var(--primary-color);
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.filter-btn:hover {
+    background: var(--primary-color);
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Mostrar/ocultar artículos según categoría seleccionada */
+#all-cat:checked ~ .blog-grid .blog-article,
+#cat-naturaleza:checked ~ .blog-grid .cat-naturaleza,
+#cat-cultura:checked ~ .blog-grid .cat-cultura,
+#cat-gastronomia:checked ~ .blog-grid .cat-gastronomia,
+#cat-aventura:checked ~ .blog-grid .cat-aventura {
+    display: block;
+}
+
+#cat-naturaleza:checked ~ .blog-grid .blog-article:not(.cat-naturaleza),
+#cat-cultura:checked ~ .blog-grid .blog-article:not(.cat-cultura),
+#cat-gastronomia:checked ~ .blog-grid .blog-article:not(.cat-gastronomia),
+#cat-aventura:checked ~ .blog-grid .blog-article:not(.cat-aventura) {
+    display: none;
+}
+
+#all-cat:checked ~ .filter-buttons label[for="all-cat"],
+#cat-naturaleza:checked ~ .filter-buttons label[for="cat-naturaleza"],
+#cat-cultura:checked ~ .filter-buttons label[for="cat-cultura"],
+#cat-gastronomia:checked ~ .filter-buttons label[for="cat-gastronomia"],
+#cat-aventura:checked ~ .filter-buttons label[for="cat-aventura"] {
+    background: var(--primary-color);
+    color: white;
+}
+
+/* Grid Newspaper */
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.main-article {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.blog-article {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    display: block;
+    animation: articleAppear 0.6s ease-out forwards;
+    opacity: 0;
+}
+
+@keyframes articleAppear {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.blog-article:nth-child(1) { animation-delay: 0.1s; }
+.blog-article:nth-child(2) { animation-delay: 0.2s; }
+.blog-article:nth-child(3) { animation-delay: 0.3s; }
+.blog-article:nth-child(4) { animation-delay: 0.4s; }
+.blog-article:nth-child(5) { animation-delay: 0.5s; }
+.blog-article:nth-child(6) { animation-delay: 0.6s; }
+.blog-article:nth-child(7) { animation-delay: 0.7s; }
+.blog-article:nth-child(8) { animation-delay: 0.8s; }
+
+/* Scroll Reveal simulado con CSS */
+.blog-article {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.blog-article.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.blog-article:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+}
+
+.article-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+}
+
+.main-article .article-image {
+    height: 300px;
+}
+
+.article-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.blog-article:hover .article-image img {
+    transform: scale(1.08);
+}
+
+.article-content {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.article-meta {
+    display: flex;
+    gap: 1rem;
+    font-size: 0.85rem;
+    color: #999;
+    margin-bottom: 0.8rem;
+}
+
+.article-date {
+    color: var(--accent-color);
+    font-weight: 600;
+}
+
+.article-author {
+    color: #666;
+}
+
+.blog-article h3 {
+    font-size: 1.3rem;
+    margin: 0.8rem 0;
+    color: var(--primary-color);
+    line-height: 1.4;
+}
+
+.main-article h3 {
+    font-size: 1.8rem;
+}
+
+.blog-article p {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    flex-grow: 1;
+}
+
+/* Tags y categorías */
+.article-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: auto;
+}
+
+.tag {
+    display: inline-block;
+    padding: 0.4rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.tag-naturaleza {
+    background: rgba(132, 250, 176, 0.3);
+    color: #2d8659;
+    border: 1px solid #84fab0;
+}
+
+.tag-cultura {
+    background: rgba(250, 112, 154, 0.3);
+    color: #8b3a3a;
+    border: 1px solid #fa709a;
+}
+
+.tag-gastronomia {
+    background: rgba(255, 154, 86, 0.3);
+    color: #8b5a00;
+    border: 1px solid #ff9a56;
+}
+
+.tag-aventura {
+    background: rgba(79, 172, 254, 0.3);
+    color: #1a4d7a;
+    border: 1px solid #4facfe;
+}
+
+.tag-paisaje,
+.tag-fotografia,
+.tag-historia,
+.tag-tradicion,
+.tag-recetas,
+.tag-bebidas,
+.tag-deportes,
+.tag-rutas,
+.tag-fauna {
+    background: rgba(52, 152, 219, 0.2);
+    color: #2c3e50;
+    border: 1px solid var(--accent-color);
+}
+
+.tag:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* ============================================
+   SECCIÓN DE COMENTARIOS
+   ============================================ */
+
+.comments-section {
+    background: white;
+    padding: 5rem 0;
+}
+
+.comments-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.comment-item {
+    background: #f8f9fa;
+    padding: 2rem;
+    border-radius: 12px;
+    display: flex;
+    gap: 1.5rem;
+    border-left: 4px solid var(--accent-color);
+    transition: all 0.3s ease;
+}
+
+.comment-item:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+}
+
+/* Avatares creados con CSS */
+.comment-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Avatar 1 - Azul con iniciales */
+.avatar-1 {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.avatar-1::before {
+    content: 'SM';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* Avatar 2 - Rosa */
+.avatar-2 {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.avatar-2::before {
+    content: 'MG';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* Avatar 3 - Verde */
+.avatar-3 {
+    background: linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%);
+}
+
+.avatar-3::before {
+    content: 'ER';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #2c3e50;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* Avatar 4 - Naranja */
+.avatar-4 {
+    background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+}
+
+.avatar-4::before {
+    content: 'DT';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #6b4423;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.comment-content {
+    flex: 1;
+}
+
+.comment-author {
+    font-weight: bold;
+    color: var(--primary-color);
+    font-size: 1.05rem;
+    margin-bottom: 0.3rem;
+}
+
+.comment-date {
+    font-size: 0.85rem;
+    color: #999;
+    margin-bottom: 0.8rem;
+}
+
+.comment-item p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.comment-rating {
+    font-size: 1rem;
+    letter-spacing: 0.2rem;
+    color: #ffc107;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* ============================================
+   14. RESPONSIVE - TABLET (768px)
    ============================================ */
 
 @media (max-width: 480px) {
