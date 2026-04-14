@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/destinos.css">
+    <title>Destinos turisticos</title>
+</head>
+<body>
+     <!-- Header con Mega-Menú -->
+    <header class="header">
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">WTJ</div>
+                <nav class="nav-menu">
+                    <ul class="menu-items">
+                        <a href="index.html" class="menu-link">Inicio</a>
+                        <li class="menu-item">
+                            <a href="destinos.html" class="menu-link">Destinos</a>
+                            <div class="mega-menu">
+                                <div class="mega-menu-content">
+                                    <div class="mega-column">
+                                        <h4>Destinos Populares</h4>
+                                        <ul>
+                                            <li><a href="#">Serranías del Hornocal</a></li>
+                                            <li><a href="#">Laguna de los Pozos</a></li>
+                                            <li><a href="#">Purmamarca</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="mega-column">
+                                        <h4>Naturaleza</h4>
+                                        <ul>
+                                            <li><a href="#">Sierras</a></li>
+                                            <li><a href="#">Salinas</a></li>
+                                            <li><a href="#">Bosques</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="mega-column">
+                                        <h4>Cultura</h4>
+                                        <ul>
+                                            <li><a href="#">Pueblos Originarios</a></li>
+                                            <li><a href="#">Artesanías</a></li>
+                                            <li><a href="#">Patrimonio</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#" class="menu-link">Agencias</a>
+                            <div class="mega-menu">
+                                <div class="mega-menu-content">
+                                    <div class="mega-column">
+                                        <h4>Agencias Recomendadas</h4>
+                                        <ul>
+                                            <li><a href="#">Aventura Tours</a></li>
+                                            <li><a href="#">Jujuy Travel</a></li>
+                                            <li><a href="#">Turismo Local</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#" class="menu-link">Precios</a>
+                            <div class="mega-menu">
+                                <div class="mega-menu-content">
+                                    <div class="mega-column">
+                                        <h4>Paquetes</h4>
+                                        <ul>
+                                            <li><a href="#">Económico</a></li>
+                                            <li><a href="#">Premium</a></li>
+                                            <li><a href="#">Luxury</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li><a href="#contacto" class="menu-link">Contacto</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section>
+        <h2> Explora nuestros destinos></h2>
+    <div class="filter-container">
+        <input type="radio" name="destinos" id="all" checked>
+        <input type="radio" name="destinos" id="cultural">
+        <input type="radio" name="destinos" id="nature">
+        <input type="radio" name="destinos" id="beach">
+
+        <div class="filter-labels">
+            <label for="all">Todos</label>
+            <label for="cultural">Cultural</label>
+            <label for="nature">Naturaleza</label>
+            <label for="beach">Sol y Playa</label>
+        </div>
+
+        <div class="gallery">
+            <div class="card cat-cultural height-md">
+                <img src="https://picsum.photos/400/600?random=1" alt="Roma">
+                <div class="overlay">
+                    <h3>Roma, Italia</h3>
+                    <p>Historia en cada rincón.</p>
+                </div>
+            </div>
+            
+            <div class="card cat-nature height-lg">
+                <img src="https://picsum.photos/400/800?random=2" alt="Bosque">
+                <div class="overlay">
+                    <h3>Amazonas</h3>
+                    <p>El pulmón del mundo.</p>
+                </div>
+            </div>
+
+            <div class="card cat-beach height-sm">
+                <img src="https://picsum.photos/400/400?random=3" alt="Playa">
+                <div class="overlay">
+                    <h3>Maldivas</h3>
+                    <p>Paraíso cristalino.</p>
+                </div>
+            </div>
+
+            <div class="card cat-cultural height-lg">
+                <img src="https://picsum.photos/400/750?random=4" alt="Kioto">
+                <div class="overlay">
+                    <h3>Kioto, Japón</h3>
+                    <p>Tradición y calma.</p>
+                </div>
+            </div>
+
+            <div class="card cat-nature height-md">
+                <img src="https://picsum.photos/400/550?random=5" alt="Montaña">
+                <div class="overlay">
+                    <h3>Alpes Suizos</h3>
+                    <p>Aventura en la nieve.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="table-container">
+        <h3>Lista de Precios 2024</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Destino</th>
+                    <th>Categoría</th>
+                    <th>Duración</th>
+                    <th>Precio (USD)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td data-label="Destino">Roma</td>
+                    <td data-label="Categoría">Cultural</td>
+                    <td data-label="Duración">7 Días</td>
+                    <td>$1,200</td>
+                </tr>
+                <tr>
+                    <td data-label="Destino">Amazonas</td>
+                    <td data-label="Categoría">Naturaleza</td>
+                    <td data-label="Duración">5 Días</td>
+                    <td>$850</td>
+                </tr>
+                <tr>
+                    <td data-label="Destino">Maldivas</td>
+                    <td data-label="Categoría">Playa</td>
+                    <td data-label="Duración">10 Días</td>
+                    <td>$2,500</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    </section>
+    
+</body>
+</html>
