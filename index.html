@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio - WTJ | Web Turismo Jujuy</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style-new.css">
 </head>
 <body>
     <!-- Header con Mega-Menú -->
@@ -14,7 +14,7 @@
                 <div class="logo">WTJ</div>
                 <nav class="nav-menu">
                     <ul class="menu-items">
-                        <a href="index.html" class="menu-link">Inicio</a>
+                        <li class="menu-item"><a href="index.html" class="menu-link">Inicio</a></li>
                         <li class="menu-item">
                             <a href="destinos.html" class="menu-link">Destinos</a>
                             <div class="mega-menu">
@@ -47,7 +47,7 @@
                             </div>
                         </li>
                         <li class="menu-item">
-                            <a href="#" class="menu-link">Agencias</a>
+                            <a href="PerfilAgencia.html" class="menu-link">Agencias</a>
                             <div class="mega-menu">
                                 <div class="mega-menu-content">
                                     <div class="mega-column">
@@ -62,7 +62,7 @@
                             </div>
                         </li>
                         <li class="menu-item">
-                            <a href="#" class="menu-link">Precios</a>
+                            <a href="destinos.html#precios" class="menu-link">Precios</a>
                             <div class="mega-menu">
                                 <div class="mega-menu-content">
                                     <div class="mega-column">
@@ -76,7 +76,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li><a href="contacto.html" class="menu-link">Contacto</a></li>
+                        <li class="menu-item"><a href="contacto.html" class="menu-link">Contacto</a></li>
                     </ul>
                 </nav>
             </div>
@@ -97,7 +97,7 @@
     </section>
 
     <!-- Destinos Destacados -->
-    <section class="destinos" id="destinos">
+    <section class="destinos page-section" id="destinos">
         <div class="container">
             <h2>Destinos Destacados</h2>
             <div class="cards-grid">
@@ -197,7 +197,7 @@
     </section>
 
     <!-- Contador Animado -->
-    <section class="counter-section">
+    <section class="counter-section page-section">
         <div class="container">
             <div class="counters">
                 <div class="counter-item">
@@ -221,7 +221,7 @@
     </section>
 
     <!-- Testimonios en Carrusel -->
-    <section class="testimonios" id="testimonios">
+    <section class="testimonios page-section" id="testimonios">
         <div class="container">
             <h2>Lo que dicen nuestros viajeros</h2>
             <div class="carousel-container">
@@ -253,49 +253,34 @@
     </section>
 
     <!-- Footer -->
-    <footer class="footer" id="contacto">
-        <div class="container">
-            <div class="footer-content">
-                <!-- Newsletter -->
-                <aside class="footer-section newsletter-section">
-                    <h3>Suscríbete al Newsletter</h3>
-                    <form class="newsletter-form" id="newsletter-form">
-                        <input type="email" placeholder="Tu correo electrónico" required>
-                        <button type="submit" class="btn-submit">Suscribirse</button>
-                    </form>
-                    <p class="newsletter-info">Recibe ofertas y destinos exclusivos directamente en tu bandeja.</p>
-                </aside>
-
-                <!-- Redes Sociales -->
-                <aside class="footer-section social-section">
-                    <h3>Síguenos</h3>
-                    <div class="social-links">
-                        <a href="#" class="social-link" title="Facebook">f</a>
-                        <a href="#" class="social-link" title="Instagram">📷</a>
-                        <a href="#" class="social-link" title="Twitter">𝕏</a>
-                        <a href="#" class="social-link" title="YouTube">▶</a>
-                    </div>
-                </aside>
-
-                <!-- Mapa Interactivo -->
-                <aside class="footer-section map-section">
-                    <h3>Ubicación</h3>
-                    <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=-65.5,-24.5,-63.5,-22.5&layer=mapnik" width="100%" height="200" style="border:0; border-radius: 8px;" allowfullscreen="" loading="lazy"></iframe>
-                </aside>
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-section newsletter-section">
+                <h4>Newsletter</h4>
+                <p>Recibe novedades y ofertas exclusivas de Jujuy.</p>
+                <form action="#" class="footer-form">
+                    <input type="email" placeholder="Tu email" required>
+                    <button type="submit">Suscribirse</button>
+                </form>
             </div>
-
-            <!-- Footer Bottom -->
-            <div class="footer-bottom">
-                <p>&copy; 2026 Web Turismo Jujuy. Todos los derechos reservados.</p>
-                <nav class="footer-nav">
-                    <a href="#">Privacidad</a>
-                    <a href="#">Términos</a>
-                    <a href="#">Contacto</a>
-                </nav>
+            <div class="footer-section social-section">
+                <h4>Síguenos</h4>
+                <div class="social-links">
+                    <a href="#">Facebook</a>
+                    <a href="#">Instagram</a>
+                    <a href="#">Twitter</a>
+                </div>
             </div>
+            <div class="footer-section map-section">
+                <h4>Encuéntranos</h4>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.5!2d-65.3!3d-24.2!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjTCsDEyJzAwLjAiUyA2NcKwMTgnMDAuMCJX!5e0!3m2!1ses!2sar!4v1234567890123!5m2!1ses!2sar" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; 2026 Web Turismo Jujuy. Todos los derechos reservados.</p>
         </div>
     </footer>
 
-    <script src="js/animaciones.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

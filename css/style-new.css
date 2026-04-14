@@ -1,0 +1,1373 @@
+/* ============================================
+   WTJ - ESTILOS CONSOLIDADOS Y OPTIMIZADOS
+   Web Turismo Jujuy - Sin duplicaciones
+   ============================================ */
+
+/* ============================================
+   1. RESET Y ESTILOS GLOBALES
+   ============================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #e74c3c;
+    --accent-color: #3498db;
+    --text-dark: #2c3e50;
+    --text-light: #ecf0f1;
+    --border-radius: 8px;
+    --transition: all 0.3s ease;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-dark);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ============================================
+   2. PÁGINAS - ESTILOS COMUNES
+   ============================================ */
+
+h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 3rem 0;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+main {
+    min-height: 70vh;
+}
+
+.page-section {
+    padding: 4rem 0;
+}
+
+/* ============================================
+   3. HEADER Y NAVEGACIÓN
+   ============================================ */
+
+.header {
+    background: linear-gradient(135deg, var(--primary-color) 0%, #34495e 100%);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--accent-color);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.nav-menu {
+    flex: 1;
+}
+
+.menu-items {
+    display: flex;
+    list-style: none;
+    gap: 0;
+    justify-content: flex-end;
+}
+
+.menu-item {
+    position: relative;
+}
+
+.menu-link {
+    display: block;
+    padding: 1rem 1.5rem;
+    color: var(--text-light);
+    text-decoration: none;
+    transition: var(--transition);
+    font-weight: 500;
+}
+
+.menu-link:hover {
+    background-color: rgba(52, 152, 219, 0.1);
+    color: var(--accent-color);
+}
+
+/* MEGA-MENÚ */
+.mega-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    min-width: 350px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: var(--transition);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
+
+.menu-item:hover .mega-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.mega-menu-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    padding: 2rem;
+}
+
+.mega-column h4 {
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.mega-column ul {
+    list-style: none;
+}
+
+.mega-column ul li {
+    margin-bottom: 0.5rem;
+}
+
+.mega-column ul li a {
+    color: var(--text-dark);
+    text-decoration: none;
+    transition: var(--transition);
+    font-size: 0.9rem;
+}
+
+.mega-column ul li a:hover {
+    color: var(--secondary-color);
+    padding-left: 5px;
+}
+
+/* ============================================
+   4. HERO SECTION
+   ============================================ */
+
+.hero {
+    position: relative;
+    min-height: 70vh;
+    padding: 5rem 0 4rem;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    z-index: -2;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
+.hero-content {
+    text-align: center;
+    color: white;
+    z-index: 1;
+    max-width: 900px;
+    padding: 0 1rem;
+}
+
+.hero-title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.hero-subtitle {
+    font-size: 1.15rem;
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Animaciones del Hero */
+@keyframes slideInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-title {
+    animation: slideInDown 1s ease-out;
+}
+
+.animate-subtitle {
+    animation: slideInUp 1s ease-out 0.3s both;
+}
+
+.cta-button {
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+    background: var(--secondary-color);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: var(--transition);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    animation: slideInUp 1s ease-out 0.6s both;
+}
+
+.cta-button:hover {
+    background: #c0392b;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(231, 76, 60, 0.3);
+}
+
+/* ============================================
+   5. DESTINOS DESTACADOS
+   ============================================ */
+
+.destinos {
+    padding: 5rem 0;
+    background: #f8f9fa;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.card {
+    background: white;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: var(--transition);
+    transform: translateY(0);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+.card-image {
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    transition: transform 0.4s ease;
+}
+
+.card:hover .card-image {
+    transform: scale(1.05);
+}
+
+.card-content {
+    padding: 1.5rem;
+}
+
+.card-content h3 {
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+    font-size: 1.2rem;
+}
+
+.card-content p {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.card-link {
+    display: inline-block;
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: bold;
+    transition: var(--transition);
+}
+
+.card-link:hover {
+    color: var(--secondary-color);
+    transform: translateX(5px);
+}
+
+/* ============================================
+   6. GALERÍA Y FILTROS
+   ============================================ */
+
+.filter-container {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+.filter-labels {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+
+.filter-labels label {
+    padding: 10px 20px;
+    background: white;
+    border: 2px solid var(--primary-color);
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-weight: bold;
+}
+
+#all:checked ~ .filter-labels label[for="all"],
+#cultural:checked ~ .filter-labels label[for="cultural"],
+#nature:checked ~ .filter-labels label[for="nature"] {
+    background: var(--primary-color);
+    color: white;
+}
+
+#cultural:checked ~ .gallery .card:not(.cat-cultural),
+#nature:checked ~ .gallery .card:not(.cat-nature) {
+    display: none;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-auto-rows: 20px;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto 50px auto;
+}
+
+.gallery .card {
+    position: relative;
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.height-sm { grid-row: span 12; }
+.height-md { grid-row: span 18; }
+.height-lg { grid-row: span 25; }
+
+.gallery .card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    padding: 20px;
+    text-align: center;
+}
+
+.gallery .card:hover img { 
+    transform: scale(1.1); 
+}
+
+.gallery .card:hover .overlay { 
+    opacity: 1; 
+}
+
+/* ============================================
+   7. CONTADORES ANIMADOS
+   ============================================ */
+
+.counter-section {
+    background: linear-gradient(135deg, var(--primary-color) 0%, #34495e 100%);
+    color: white;
+    padding: 4rem 0;
+}
+
+.counters {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    text-align: center;
+}
+
+.counter-item {
+    padding: 2rem;
+}
+
+.counter-number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--accent-color);
+}
+
+.counter-item p {
+    margin-top: 0.5rem;
+    font-size: 1.1rem;
+}
+
+@keyframes countUp {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.counter-number.animated {
+    animation: countUp 0.5s ease-out;
+}
+
+/* ============================================
+   8. TESTIMONIOS - CARRUSEL
+   ============================================ */
+
+.testimonios {
+    background: #f8f9fa;
+    padding: 5rem 0;
+}
+
+.carousel-container {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.6s ease;
+}
+
+.carousel-item {
+    min-width: 100%;
+    flex-shrink: 0;
+}
+
+.testimonial-card {
+    background: white;
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    min-height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.testimonial-text {
+    font-size: 1.1rem;
+    font-style: italic;
+    margin-bottom: 1.5rem;
+    color: var(--text-dark);
+    line-height: 1.8;
+}
+
+.testimonial-author {
+    font-weight: bold;
+    color: var(--accent-color);
+    font-size: 1rem;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--accent-color);
+    color: white;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.5rem;
+    transition: var(--transition);
+    z-index: 10;
+}
+
+.carousel-btn:hover {
+    background: var(--secondary-color);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.prev {
+    left: -60px;
+}
+
+.next {
+    right: -60px;
+}
+
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 2rem;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #ddd;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.dot.active {
+    background: var(--accent-color);
+    width: 30px;
+    border-radius: 6px;
+}
+
+/* ============================================
+   9. TABLAS RESPONSIVAS
+   ============================================ */
+
+.table-container {
+    max-width: 1000px;
+    margin: 0 auto 50px;
+    overflow-x: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+thead {
+    background: linear-gradient(135deg, var(--primary-color) 0%, #34495e 100%);
+    color: white;
+}
+
+th {
+    padding: 1rem;
+    text-align: left;
+    font-weight: bold;
+}
+
+td {
+    padding: 1rem;
+    border-bottom: 1px solid #eee;
+}
+
+tr:hover {
+    background: #f8f9fa;
+}
+
+@media (max-width: 600px) {
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    tr {
+        margin-bottom: 15px;
+        border: 1px solid #eee;
+        border-radius: 8px;
+    }
+
+    td {
+        border: none;
+        position: relative;
+        padding-left: 50%;
+        text-align: right;
+    }
+
+    td:before {
+        content: attr(data-label);
+        position: absolute;
+        left: 15px;
+        width: 45%;
+        text-align: left;
+        font-weight: bold;
+        color: var(--primary-color);
+    }
+}
+
+/* ============================================
+   10. FORMULARIO DE CONTACTO
+   ============================================ */
+
+.contacto {
+    min-height: 80vh;
+    background: #f8f9fa;
+}
+
+.contact-form {
+    max-width: 650px;
+    margin: 0 auto;
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-family: inherit;
+    transition: var(--transition);
+    font-size: 1rem;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.contact-form .cta-button {
+    width: 100%;
+    margin-top: 1rem;
+    animation: none;
+}
+
+/* Spinner para formulario */
+.form-spinner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid rgba(255, 255, 255, 0.3);
+    border-top: 5px solid white;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Modal de confirmación */
+.modal-confirm {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9998;
+}
+
+.modal-content {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    max-width: 400px;
+    animation: slideInScale 0.4s ease;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.modal-content h3 {
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+@keyframes slideInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes starfield {
+    0% {
+        box-shadow:
+            50px 50px 0 0 #ffc107,
+            100px 100px 0 0 #3498db,
+            150px 75px 0 0 #e74c3c,
+            200px 150px 0 0 #2ecc71,
+            75px 200px 0 0 #f39c12;
+        opacity: 1;
+    }
+    100% {
+        box-shadow:
+            50px 50px 0 100px #ffc107,
+            100px 100px 0 100px #3498db,
+            150px 75px 0 100px #e74c3c,
+            200px 150px 0 100px #2ecc71,
+            75px 200px 0 100px #f39c12;
+        opacity: 0;
+    }
+}
+
+/* ============================================
+   11. AGENCIAS - CARD FLIP 3D
+   ============================================ */
+
+.agencias-section {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    padding: 5rem 2rem;
+}
+
+.agencias-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
+    perspective: 1200px;
+}
+
+.agencia-card {
+    height: 420px;
+    cursor: pointer;
+    position: relative;
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transform-style: preserve-3d;
+}
+
+.agencia-card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+}
+
+.card-front {
+    background: white;
+    z-index: 2;
+    padding: 1.5rem;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.agencia-image {
+    width: 100%;
+    height: 180px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+
+.agencia-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.card-front:hover .agencia-image img {
+    transform: scale(1.08);
+}
+
+.agencia-info h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+}
+
+.agencia-info p {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+/* Sistema de estrellas */
+.rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    gap: 0.3rem;
+}
+
+.rating input {
+    display: none;
+}
+
+.rating label {
+    cursor: pointer;
+    font-size: 1.8rem;
+    color: #ddd;
+    transition: all 0.2s ease;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.rating label:hover,
+.rating label:hover ~ label,
+.rating input:checked ~ label {
+    color: #ffc107;
+    text-shadow: 0 2px 8px rgba(255, 193, 7, 0.5);
+    transform: scale(1.15);
+}
+
+.card-back {
+    background: linear-gradient(135deg, var(--primary-color) 0%, #34495e 100%);
+    color: white;
+    z-index: 1;
+    transform: rotateY(180deg);
+    padding: 1.2rem 1rem;
+    justify-content: space-between;
+    overflow-y: auto;
+    gap: 0.5rem;
+}
+
+.card-back h3 {
+    font-size: 1.1rem;
+    color: var(--accent-color);
+    margin: 0 0 0.4rem 0;
+}
+
+.card-back p {
+    font-size: 0.8rem;
+    line-height: 1.4;
+    color: rgba(255, 255, 255, 0.9);
+    margin: 0 0 0.6rem 0;
+}
+
+.agencia-details {
+    font-size: 0.75rem;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.6rem;
+    border-radius: 6px;
+    margin: 0.4rem 0;
+    border-left: 3px solid var(--accent-color);
+    flex-shrink: 0;
+}
+
+.agencia-details p {
+    margin: 0.3rem 0;
+    color: rgba(255, 255, 255, 0.95);
+}
+
+.agencia-details strong {
+    color: var(--accent-color);
+}
+
+.rating-back {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    margin: 0.4rem 0;
+    padding: 0.6rem;
+    background: rgba(255, 193, 7, 0.15);
+    border-radius: 6px;
+    animation: ratingPulse 2s ease-in-out infinite;
+    flex-shrink: 0;
+}
+
+.rating-stars {
+    display: flex;
+    gap: 0.1rem;
+    font-size: 1.2rem;
+}
+
+.rating-stars span {
+    color: #ffc107;
+    text-shadow: 0 2px 8px rgba(255, 193, 7, 0.5);
+    animation: starBounce 1s ease-in-out infinite;
+}
+
+.rating-stars span:nth-child(1) { animation-delay: 0s; }
+.rating-stars span:nth-child(2) { animation-delay: 0.15s; }
+.rating-stars span:nth-child(3) { animation-delay: 0.3s; }
+.rating-stars span:nth-child(4) { animation-delay: 0.45s; }
+.rating-stars span:nth-child(5) { animation-delay: 0.6s; }
+
+@keyframes starBounce {
+    0%, 100% {
+        transform: translateY(0) scale(1);
+    }
+    50% {
+        transform: translateY(-8px) scale(1.1);
+    }
+}
+
+@keyframes ratingPulse {
+    0%, 100% {
+        box-shadow: inset 0 0 0 0 rgba(255, 193, 7, 0.4);
+    }
+    50% {
+        box-shadow: inset 0 0 0 4px rgba(255, 193, 7, 0.1);
+    }
+}
+
+.satisfaction {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #ffc107;
+    text-align: center;
+    animation: satisfactionGrow 1.5s ease-out infinite;
+}
+
+@keyframes satisfactionGrow {
+    0% {
+        transform: scale(0.8);
+        opacity: 0.6;
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.contact-btn {
+    display: inline-block;
+    background: var(--accent-color);
+    color: white;
+    padding: 0.6rem 1.2rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+    border: 2px solid var(--accent-color);
+    align-self: flex-start;
+    margin-top: auto;
+    flex-shrink: 0;
+}
+
+.contact-btn:hover {
+    background: transparent;
+    color: var(--accent-color);
+    transform: translateX(5px);
+    box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+}
+
+/* ============================================
+   12. FOOTER
+   ============================================ */
+
+.footer {
+    background: linear-gradient(135deg, #162131 0%, #1a2f48 100%);
+    color: #f7f9fc;
+    padding: 3rem 0 1.5rem;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 2rem;
+    align-items: start;
+    margin-bottom: 1.5rem;
+}
+
+.footer-section h4 {
+    margin-bottom: 1rem;
+    font-size: 1.05rem;
+    color: #ffffff;
+}
+
+.footer-section p {
+    margin-bottom: 1rem;
+    color: #d1d9e6;
+    font-size: 0.95rem;
+}
+
+.footer-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.footer-form input {
+    flex: 1 1 180px;
+    padding: 0.8rem 1rem;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.05);
+    color: #fff;
+    transition: var(--transition);
+}
+
+.footer-form input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.footer-form input:focus {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: var(--accent-color);
+}
+
+.footer-form button {
+    padding: 0.8rem 1.4rem;
+    border: none;
+    border-radius: 999px;
+    background: var(--accent-color);
+    color: #fff;
+    cursor: pointer;
+    transition: var(--transition);
+    font-weight: bold;
+}
+
+.footer-form button:hover {
+    background: #1d85dd;
+    transform: scale(1.05);
+}
+
+.social-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.social-links a {
+    color: #f7f9fc;
+    text-decoration: none;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 0.6rem 1rem;
+    border-radius: 999px;
+    transition: var(--transition);
+}
+
+.social-links a:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+}
+
+.map-section iframe {
+    width: 100%;
+    border: none;
+    min-height: 220px;
+    border-radius: 15px;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    padding-top: 1rem;
+    text-align: center;
+}
+
+.footer-bottom p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 0.9rem;
+}
+
+.footer-nav {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.footer-nav a {
+    color: #f7f9fc;
+    text-decoration: none;
+    transition: var(--transition);
+    font-size: 0.9rem;
+}
+
+.footer-nav a:hover {
+    color: var(--accent-color);
+}
+
+/* ============================================
+   13. RESPONSIVE - TABLET (768px)
+   ============================================ */
+
+@media (max-width: 768px) {
+    h2 {
+        font-size: 2rem;
+        margin: 2rem 0;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .cta-button {
+        padding: 0.8rem 2rem;
+        font-size: 0.95rem;
+    }
+
+    .cards-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1.5rem;
+    }
+
+    .counters {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .carousel-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+
+    .prev {
+        left: -50px;
+    }
+
+    .next {
+        right: -50px;
+    }
+
+    .agencias-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.5rem;
+    }
+
+    .agencia-card {
+        height: 380px;
+    }
+
+    .card-front,
+    .card-back {
+        padding: 1.25rem;
+    }
+
+    .card-inner {
+        transition: transform 0.6s ease;
+    }
+}
+
+/* ============================================
+   14. RESPONSIVE - MOBILE (480px)
+   ============================================ */
+
+@media (max-width: 480px) {
+    h2 {
+        font-size: 1.6rem;
+        margin: 1.5rem 0;
+    }
+
+    .hero-title {
+        font-size: 1.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 0.9rem;
+    }
+
+    .container {
+        padding: 0 15px;
+    }
+
+    .menu-link {
+        padding: 0.8rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .cards-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .counters {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .contact-form {
+        padding: 1.5rem;
+        max-width: 100%;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        padding: 0.6rem 0.8rem;
+        font-size: 16px;
+    }
+
+    .carousel-btn {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+    }
+
+    .prev {
+        left: -40px;
+    }
+
+    .next {
+        right: -40px;
+    }
+
+    .agencias-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .agencia-card {
+        height: 400px;
+    }
+
+    .rating label {
+        font-size: 1.5rem;
+    }
+
+    .card-back h3 {
+        font-size: 1.1rem;
+    }
+
+    .agencia-details {
+        padding: 0.5rem;
+        font-size: 0.7rem;
+    }
+
+    .satisfaction {
+        font-size: 1.2rem;
+    }
+
+    .contact-btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.8rem;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .footer-form {
+        flex-direction: column;
+    }
+
+    .footer-form input {
+        flex: 1;
+    }
+}
