@@ -22,17 +22,17 @@
                                     <div class="mega-column">
                                         <h4>Destinos Populares</h4>
                                         <ul>
-                                            <li><a href="#">Serranías del Hornocal</a></li>
-                                            <li><a href="#">Laguna de los Pozos</a></li>
-                                            <li><a href="#">Purmamarca</a></li>
+                                            <li><a href="destinos.html?destino=hornocal">Serranías del Hornocal</a></li>
+                                            <li><a href="destinos.html?destino=pozos">Laguna de los Pozos</a></li>
+                                            <li><a href="destinos.html?destino=purmamarca">Purmamarca</a></li>
                                         </ul>
                                     </div>
                                     <div class="mega-column">
                                         <h4>Naturaleza</h4>
                                         <ul>
-                                            <li><a href="#">Sierras</a></li>
-                                            <li><a href="#">Salinas</a></li>
-                                            <li><a href="#">Bosques</a></li>
+                                            <li><a href="destinos.html?destino=sierras">Sierras</a></li>
+                                            <li><a href="destinos.html?destino=salinas">Salinas</a></li>
+                                            <li><a href="destinos.html?destino=bosques">Bosques</a></li>
                                         </ul>
                                     </div>
                                     <div class="mega-column">
@@ -84,7 +84,7 @@
     </header>
 
     <section>
-        <h2> Explora nuestros destinos></h2>
+        <h2> Explora nuestros destinos </h2>
     <div class="filter-container">
         <input type="radio" name="destinos" id="all" checked>
         <input type="radio" name="destinos" id="cultural">
@@ -95,86 +95,151 @@
             <label for="all">Todos</label>
             <label for="cultural">Cultural</label>
             <label for="nature">Naturaleza</label>
-            <label for="beach">Sol y Playa</label>
         </div>
 
         <div class="gallery">
-            <div class="card cat-cultural height-md">
-                <img src="https://picsum.photos/400/600?random=1" alt="Roma">
+            <div class="card cat-nature height-md" id="destino-hornocal">
+                <img src="https://proyungas.org.ar/wp-content/uploads/2018/05/1526308028367.jpg" alt="Serranias del Hornocal">
                 <div class="overlay">
-                    <h3>Roma, Italia</h3>
-                    <p>Historia en cada rincón.</p>
+                    <h3>Serranias del Hornocal</h3>
+                    <p>La montaña arcoíris del norte.</p>
                 </div>
             </div>
             
-            <div class="card cat-nature height-lg">
-                <img src="https://picsum.photos/400/800?random=2" alt="Bosque">
+            <div class="card cat-nature height-lg" id="destino-pozos">
+                <img src="https://adntravel.com.ar/wp-content/uploads/2026/03/flamencos-laguna-pozuelo-jujuy.webp" alt="Laguna de los pozos">
                 <div class="overlay">
-                    <h3>Amazonas</h3>
-                    <p>El pulmón del mundo.</p>
+                    <h3>Laguna de los pozos</h3>
+                    <p>Un rincón de paz escondido.</p>
                 </div>
             </div>
 
-            <div class="card cat-beach height-sm">
-                <img src="https://picsum.photos/400/400?random=3" alt="Playa">
+            <div class="card cat-cultural height-sm" id="destino-purmamarca">
+                <img src="https://www.clarin.com/2017/06/11/B1vycyjMb_1200x0.jpg" alt="Pumamarca">
                 <div class="overlay">
-                    <h3>Maldivas</h3>
-                    <p>Paraíso cristalino.</p>
+                    <h3>Pumamarca</h3>
+                    <p>Donde la tierra cuenta historias.</p>
                 </div>
             </div>
 
-            <div class="card cat-cultural height-lg">
-                <img src="https://picsum.photos/400/750?random=4" alt="Kioto">
+            <div class="card cat-nature height-lg" id="destino-sierras">
+                <img src="https://comarcaturistica.com.ar/wp-content/uploads/2024/09/sierrasgrandes9.jpg" alt="Sierras">
                 <div class="overlay">
-                    <h3>Kioto, Japón</h3>
-                    <p>Tradición y calma.</p>
+                    <h3>Sierras</h3>
+                    <p>Aire puro, mente libre.</p>
                 </div>
             </div>
 
-            <div class="card cat-nature height-md">
-                <img src="https://picsum.photos/400/550?random=5" alt="Montaña">
+            <div class="card cat-nature height-md" id="destino-salinas">
+                <img src="https://bomtravel.com/wp-content/uploads/2022/06/1-10.jpg" alt="Salinas">
                 <div class="overlay">
-                    <h3>Alpes Suizos</h3>
-                    <p>Aventura en la nieve.</p>
+                    <h3>Salinas</h3>
+                    <p>El cielo reflejado en la tierra.</p>
+                </div>
+            </div>
+            <div class="card cat-nature height-md" id="destino-bosques">
+                <img src="https://media.prensa.jujuy.gob.ar/p/7c587e403ff09ed704245554902158ef/adjuntos/301/imagenes/000/331/0000331451/1200x675/smart/img_5547jpg.jpg" alt="Bosques">
+                <div class="overlay">
+                    <h3>Bosques</h3>
+                    <p>Donde la naturaleza susurra.</p>
                 </div>
             </div>
         </div>
     </div>
 
     <div class="table-container">
-        <h3>Lista de Precios 2024</h3>
+        <h3>Lista de Precios 2026</h3>
         <table>
             <thead>
                 <tr>
                     <th>Destino</th>
                     <th>Categoría</th>
                     <th>Duración</th>
-                    <th>Precio (USD)</th>
+                    <th>Precio (ARS)</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td data-label="Destino">Roma</td>
-                    <td data-label="Categoría">Cultural</td>
-                    <td data-label="Duración">7 Días</td>
-                    <td>$1,200</td>
+                    <td data-label="Destino">Serranías del Hornocal</td>
+                    <td data-label="Categoría">Popular/ Paisaje</td>
+                    <td data-label="Duración">Full Days</td>
+                    <td>$45000</td>
                 </tr>
                 <tr>
-                    <td data-label="Destino">Amazonas</td>
-                    <td data-label="Categoría">Naturaleza</td>
+                    <td data-label="Destino">Laguna de los Pozos</td>
+                    <td data-label="Categoría">Popular / Naturaleza</td>
                     <td data-label="Duración">5 Días</td>
-                    <td>$850</td>
+                    <td>$32000</td>
                 </tr>
                 <tr>
-                    <td data-label="Destino">Maldivas</td>
-                    <td data-label="Categoría">Playa</td>
+                    <td data-label="Destino">Purmamarca</td>
+                    <td data-label="Categoría">Popular/ Cultura</td>
                     <td data-label="Duración">10 Días</td>
-                    <td>$2,500</td>
+                    <td>$32000</td>
                 </tr>
+                <tr>
+                    <td data-label="Destino">Sierras</td>
+                    <td data-label="Categoría">Naturaleza</td>
+                    <td data-label="Duración">8 Horas</td>
+                    <td>$38.000</td>
+                 </tr>
+            <tr>
+                <td data-label="Destino">Salinas</td>
+                <td data-label="Categoría">Naturaleza</td>
+                <td data-label="Duración">5 horas</td>
+                <td>$25.000</td>
+            </tr>
+            <tr>
+                <td data-label="Destino">Bosque</td>
+                <td data-label="Categoría">Naturaleza</td>
+                <td data-label="Duración">4 Horas</td>
+                <td>$35.000</td>
+            </tr>
             </tbody>
         </table>
     </div>
     </section>
+
+    <footer class="footer" id="contacto">
+        <div class="container">
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <p>&copy; 2026 Web Turismo Jujuy. Todos los derechos reservados.</p>
+                <nav class="footer-nav">
+                    <a href="#">Privacidad</a>
+                    <a href="#">Términos</a>
+                    <a href="#">Contacto</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // Script para navegar a un destino específico desde el menú
+        document.addEventListener('DOMContentLoaded', function() {
+            // Obtener el parámetro 'destino' de la URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const destino = urlParams.get('destino');
+            
+            if (destino) {
+                // Buscar el elemento con el ID correspondiente
+                const elemento = document.getElementById('destino-' + destino);
+                
+                if (elemento) {
+                    // Esperar un poco para que la página se cargue completamente
+                    setTimeout(function() {
+                        elemento.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                        // Añadir efecto visual de destaque
+                        elemento.style.transform = 'scale(1.05)';
+                        elemento.style.transition = 'transform 0.3s ease';
+                        setTimeout(function() {
+                            elemento.style.transform = 'scale(1)';
+                        }, 300);
+                    }, 100);
+                }
+            }
+        });
+    </script>
     
 </body>
 </html>

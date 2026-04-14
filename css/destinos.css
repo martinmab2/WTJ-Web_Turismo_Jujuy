@@ -151,20 +151,11 @@ body {
    Galeria
    ============================================ */
 :root {
-            --primary: #2563eb;
+            --primary: #0a389a;
             --dark: #1e293b;
             --light: #f8fafc;
             --accent: #f59e0b;
         }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: var(--light);
-            color: var(--dark);
-            margin: 0;
-            padding: 20px;
-        }
-
         h2 { text-align: center; margin-bottom: 30px; }
 
         /* --- SISTEMA DE FILTRADO --- */
@@ -196,16 +187,14 @@ body {
         /* Estado activo de los filtros */
         #all:checked ~ .filter-labels label[for="all"],
         #cultural:checked ~ .filter-labels label[for="cultural"],
-        #nature:checked ~ .filter-labels label[for="nature"],
-        #beach:checked ~ .filter-labels label[for="beach"] {
+        #nature:checked ~ .filter-labels label[for="nature"] {
             background: var(--primary);
             color: white;
         }
 
         /* Lógica de filtrado (Combinadores) */
         #cultural:checked ~ .gallery .card:not(.cat-cultural),
-        #nature:checked ~ .gallery .card:not(.cat-nature),
-        #beach:checked ~ .gallery .card:not(.cat-beach) {
+        #nature:checked ~ .gallery .card:not(.cat-nature){
             display: none;
         }
 
@@ -311,3 +300,38 @@ body {
                 color: var(--primary);
             }
         }
+
+/* ============================================
+   FOOTER
+   ============================================ */
+
+.footer {
+    background: linear-gradient(135deg, var(--primary-color) 0%, #34495e 100%);
+    color: white;
+    padding: 0rem 0 2rem;
+}
+/* Footer Bottom */
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.footer-nav {
+    display: flex;
+    gap: 2rem;
+}
+
+.footer-nav a {
+    color: white;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.footer-nav a:hover {
+    color: var(--accent-color);
+}
